@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arkchat-core"
+version = "0.1.0"
+description = "Auditable memory, tool routing, model artifact management, and evidence-aware decoding"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "ArkChat"}]
+dependencies = []
+
+[project.optional-dependencies]
+decoding = ["torch>=2.3"]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["arkchat_core*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
